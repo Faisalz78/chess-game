@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chess</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="game-container">
+    <h1>Chess Game</h1>
+
+    <!-- Top Controls -->
+    <div class="topbar">
+      <div class="clock-box">
+        <div class="clock-label">Black</div>
+        <div id="blackClock" class="clock">05:00</div>
+      </div>
+
+      <div class="controls">
+        <div class="time-controls">
+          <label class="mini-label" for="minutesInput">Minutes</label>
+          <input id="minutesInput" class="minutes-input" type="number" min="1" max="60" value="5" />
+          <button id="applyTimeBtn" class="mini-btn" type="button">Apply</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="startBtn" class="primary-btn" type="button">Start</button>
+          <button id="pauseBtn" class="mini-btn" type="button">Pause</button>
+          <button id="restartBtn" class="restart-btn" type="button">Restart</button>
+        </div>
+      </div>
+
+      <div class="clock-box">
+        <div class="clock-label">White</div>
+        <div id="whiteClock" class="clock active">05:00</div>
+      </div>
+    </div>
+
+    <p id="turn">White Turn</p>
+
+    <div class="layout">
+      <div class="board-wrap">
+        <div class="ranks">
+          <span>8</span><span>7</span><span>6</span><span>5</span>
+          <span>4</span><span>3</span><span>2</span><span>1</span>
+        </div>
+
+        <div class="board"></div>
+
+        <div class="files">
+          <span>A</span><span>B</span><span>C</span><span>D</span>
+          <span>E</span><span>F</span><span>G</span><span>H</span>
+        </div>
+      </div>
+
+      <!-- Move History -->
+      <div class="history">
+        <div class="history-title">Move History</div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Promotion Modal -->
+  <div id="promoModal" class="promo-modal hidden">
+    <div class="promo-card">
+      <div class="promo-title">Promote pawn to:</div>
+      <div class="promo-btns">
+        <button class="promo-btn" data-piece="q" type="button">Queen</button>
+        <button class="promo-btn" data-piece="r" type="button">Rook</button>
+        <button class="promo-btn" data-piece="b" type="button">Bishop</button>
+        <button class="promo-btn" data-piece="n" type="button">Knight</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

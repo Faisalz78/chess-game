@@ -1,0 +1,32 @@
+{
+  "name": "chess-game",
+  "version": "1.0.0",
+  "description": "Chess Game built with Electron",
+  "main": "main.js",
+
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+
+  "build": {
+    "appId": "com.faisal.chessgame",
+    "productName": "Chess Game",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+
+  "license": "ISC",
+
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-builder": "^26.4.0"
+  }
+}
