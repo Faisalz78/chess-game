@@ -24,6 +24,19 @@ You can download the latest Windows installer from the **Releases** section:
 👉 Go to **Releases** → Download `Chess.Game.Setup.1.0.0.exe`
 
 ---
+## ⚠️ Windows SmartScreen Notice
+
+Windows may show a warning saying:
+
+> **"Windows protected your PC"**
+
+This occurs because the application is not code-signed.
+
+Click **More info → Run anyway** to continue.
+
+This is normal for new or personal projects.
+
+---
 
 ## 🛠️ Built With
 - HTML  
@@ -34,6 +47,10 @@ You can download the latest Windows installer from the **Releases** section:
 ---
 
 ## ⚙️ How to Run (for Developers)
+
 ```bash
 npm install
 npm start
+
+
+
